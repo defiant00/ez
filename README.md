@@ -1,1 +1,3 @@
 # ez
+
+Embedded Zig experiments.
