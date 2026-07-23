@@ -48,6 +48,7 @@ pub fn build(b: *std.Build) void {
         }),
     });
     ez_exe.setLinkerScript(b.path("src/ez/rp2040/link.ld"));
+    ez_exe.entry = .{ .symbol_name = "main" };
 
     // ez.bin
     const ez_bin = ez_exe.addObjCopy(.{ .format = .binary });

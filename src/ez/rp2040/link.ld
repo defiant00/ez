@@ -14,4 +14,6 @@ SECTIONS
         . = _boot_start + 252; /* ensure ez.boot fits in the first 252 bytes */
         . += 4;                /* add 4 bytes of padding for the CRC placeholder */
     } > flash
+
+    ez.main : { KEEP(*(ez.main)) } > flash
 }
