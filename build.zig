@@ -42,6 +42,7 @@ pub fn build(b: *std.Build) void {
             .root_source_file = b.path("src/rp2040_blink.zig"),
             .target = target,
             .optimize = optimize,
+            .unwind_tables = .none,
             .imports = &.{
                 .{ .name = "ez", .module = ez_mod },
             },
